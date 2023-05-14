@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+ Route::get('/', function () {
+     return view('welcome');
+ });
 
 Auth::routes();
 
@@ -23,6 +23,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::prefix('items')->group(function () {
     Route::get('/', [App\Http\Controllers\ItemController::class, 'index']);
-    Route::get('/add', [App\Http\Controllers\ItemController::class, 'add']);
-    Route::post('/add', [App\Http\Controllers\ItemController::class, 'add']);
+    Route::get('/add', [App\Http\Controllers\ItemController::class, 'create']);
+    Route::post('/add',[App\Http\Controllers\ItemController::class, 'store']);
 });

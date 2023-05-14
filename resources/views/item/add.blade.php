@@ -24,23 +24,45 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="name">名前</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="名前">
+                            <label for="name">商品名</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="名前" value="{{ old('name') }}">
                         </div>
 
                         <div class="form-group">
-                            <label for="type">種別</label>
-                            <input type="number" class="form-control" id="type" name="type" placeholder="1, 2, 3, ...">
+                            <label for="type_id">種類</label>
+                        <div class="col-md-6">
+                                <select name="type_id">
+                                    <option value="" disable></option>
+                                    @foreach($types as $type_id => $name)
+                                    <option value="{{ $type_id }}" @if(old('type_id')==$type_id)selected @endif>{{ $name }}</option>
+                                    @endforeach
+                                </select>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label for="size_id">サイズ</label>
+                        @foreach ($sizes as $size_id => $name)
+                            <label class="form-check-label">
+                            <input type="radio" value="{{ $size_id }}">
+                            <span><i></i>{{ $name }}</span>
+                            </label>
+                        @endforeach
                         </div>
 
                         <div class="form-group">
                             <label for="detail">詳細</label>
-                            <input type="text" class="form-control" id="detail" name="detail" placeholder="詳細説明">
+                        <div class="col-md-6">
+                            <textarea class="form-control" name="detail" cols="30" rows="10" placeholder="詳細説明">{{ old('detail') }}</textarea>
                         </div>
+
                     </div>
 
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">登録</button>
+                    <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('登録') }}
+                                </button>
+                            </div>
                     </div>
                 </form>
             </div>
@@ -52,4 +74,8 @@
 @stop
 
 @section('js')
+<script>
+    const div = document.querySelector('div')
+    div.animate([{opacity: '0'}, {opacity: '1'}], 200)
+</script>
 @stop
