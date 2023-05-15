@@ -31,6 +31,7 @@ class ItemController extends Controller
                 'type_id' => 'required',
                 'size_id' => 'required',
                 'detail' => 'required',
+                'price' => 'integer',
             ];
             $this->validate($request, $validate_rule);
     
@@ -40,6 +41,7 @@ class ItemController extends Controller
             $items->user_id = Auth::id();
             $items->type_id = $request->type_id;
             $items->size_id = $request->size_id;
+            $items->price = $request->price;
             $items->detail = $request->detail;
             $items->save();
           
@@ -51,16 +53,16 @@ class ItemController extends Controller
             //一覧から指定されたIDと同じIDのレコードを取得する by Higaki
     
             $types = Item::TYPES;
+            $sizes = Item::SIZES;
             $items = Item::where('id','=',$request->id)->first();
             
-            return view('item.edit',compact('types') )->with([
+            return view('item.edit',compact('types','sizes') )->with([
                     'item' => $items
             ]);
         }
     
         public function update(Request $request){
         
-            // Nameは入力必須項目 by Higaki
             $validate_rule = [
                 'name' => 'required',
                 'detail' => 'required',
@@ -69,11 +71,15 @@ class ItemController extends Controller
     
             // 既存のレコードを取得して、編集してから保存する by Higaki
             $items = Item::where('id','=',$request->id)->first();
+            //dd($request->id);
             $items->name = $request->name;
             $items->type_id = $request->type_id;
+            $items->size_id = $request->size_id;
+            $items->price = $request->price;
             $items->detail = $request->detail;
             $items->save();
-          
+
+            //return redirect('/items')->route($items->id);
             return redirect('/items');
         }
     
@@ -85,7 +91,6 @@ class ItemController extends Controller
     
             return redirect('/items');
         }
-    
-    
-    }
+
+}
     
