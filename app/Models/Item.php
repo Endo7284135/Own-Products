@@ -17,6 +17,7 @@ class Item extends Model
         'type_id',
         'size_id',
         'like',
+        'price',
         'detail',
     ];
 

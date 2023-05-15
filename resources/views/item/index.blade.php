@@ -28,6 +28,7 @@
                                 <th>名前</th>
                                 <th>種別</th>
                                 <th>サイズ</th>
+                                <th>値段</th>
                                 <th>更新日時</th>
                                 <th>編集</th>
                             </tr>
@@ -38,9 +39,10 @@
                                     <td>{{ $value->id }}</td>
                                     <td>{{ $value->name }}</td>
                                     <td>{{ $types[$value->type_id] }}</td>
-                                    <td>{{ $types[$value->size_id] }}</td>
+                                    <td>{{ $sizes[$value->size_id] }}</td>
+                                    <td>{{ $value->price }}</td>
                                     <td>{{ $value->updated_at->format('m月d日H:i') }}</td>
-                                    <td  width="15%"><a href="/item_edit/{{$value->id}}"> >>編集 </a></td>
+                                    <td  width="15%"><a href="{{ url('items/item_edit/'.$value->id) }}"> >>編集 </a></td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -158,6 +158,7 @@ return [
         'type_id' => '種別',
         'detail' => '詳細',
         'size_id' => 'サイズ',
+        'price' => '値段',
     ],
 
 ];

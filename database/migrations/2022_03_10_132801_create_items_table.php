@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration
             $table->string('status', 100)->default('active');
             $table->unsignedBigInteger('user_id');
             $table->string('name',100);
+            $table->integer('price');
             $table->unsignedsmallInteger('type_id');
             $table->unsignedsmallInteger('size_id');
             $table->string('detail',500);
