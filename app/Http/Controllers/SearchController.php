@@ -12,15 +12,15 @@ class SearchController extends Controller
     {
         $keyword = $request->input('keyword');
 
-        $query = item::query();
+        $query = item::sortable();
 
         if(!empty($keyword)) {
-            $query->where('name', 'LIKE', "%{$keyword}%")
-
-                ->orWhere('detail', 'LIKE', "%{$keyword}%");
+            $items = item::where('name', 'LIKE', "%{$keyword}%")
+            ->orWhere('detail', 'LIKE', "%{$keyword}%")
+            ->paginate(5);
+            } else {
+                $items = item::paginate(5);
             }
-
-        $items = $query->get();
 
         return view('search.index', compact('items', 'keyword'));
     }

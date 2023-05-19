@@ -40,7 +40,7 @@
                                     <td>{{ $value->name }}</td>
                                     <td>{{ $types[$value->type_id] }}</td>
                                     <td>{{ $sizes[$value->size_id] }}</td>
-                                    <td>{{ $value->price }}</td>
+                                    <td>{{ $value->price }}円</td>
                                     <td>{{ $value->updated_at->format('m月d日H:i') }}</td>
                                     <td  width="15%"><a href="{{ url('items/item_edit/'.$value->id) }}"> >>編集 </a></td>
                                 </tr>

@@ -47,9 +47,15 @@
                         <div class="form-group">
                         <label for="size_id">サイズ</label>
                         @foreach ($sizes as $size_id => $name)
+                            @if( $item->size_id ==  $size_id )
                             <label class="form-check-label">
-                            <input type="radio" name="size_id" value="{{ $size_id }}" selected>
+                            <input type="radio" name="size_id" value="{{ $size_id }}" checked>
                             <span><i></i>{{ $name }}</span>
+                            @else
+                            <label class="form-check-label">
+                            <input type="radio" name="size_id" value="{{ $size_id }}">
+                            <span><i></i>{{ $name }}</span>
+                            @endif
                             </label>
                         @endforeach
                         </div>
