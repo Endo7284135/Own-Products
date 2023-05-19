@@ -25,7 +25,7 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>名前</th>
+                                <th>商品名</th>
                                 <th>種別</th>
                                 <th>サイズ</th>
                                 <th>値段</th>
