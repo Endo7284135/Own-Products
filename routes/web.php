@@ -28,7 +28,6 @@ Route::prefix('items')->group(function () {
     Route::get('/item_edit/{id}',[App\Http\Controllers\ItemController::class, 'edit']);
     Route::post('/update',[App\Http\Controllers\ItemController::class, 'update']);
     Route::get('/destroy/{id}',[App\Http\Controllers\ItemController::class, 'destroy']);
-
-    Route::get('/ajax/like/user_list', 'LikeController@user_list'); // 👈 ユーザー情報を取得
-    Route::post('/ajax/like', 'LikeController@like'); // 👈 いいね！データを追加
+    Route::get('/search', [App\Http\Controllers\SearchController::class, 'index'])->name('searches.index');
+    Route::get('/search/detail/{id}', [App\Http\Controllers\SearchController::class, 'detail']);
 });

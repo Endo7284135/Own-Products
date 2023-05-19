@@ -43,7 +43,7 @@
                         <label for="size_id">サイズ</label>
                         @foreach ($sizes as $size_id => $name)
                             <label class="form-check-label">
-                            <input type="radio" name="size_id" value="{{ $size_id }}">
+                            <input type="radio" name="size_id" value="{{ $size_id }}" @if(old('size_id')==$size_id) checked @endif>
                             <span><i></i>{{ $name }}</span>
                             </label>
                         @endforeach
@@ -51,7 +51,7 @@
 
                         <div class="form-group">
                             <label for="price">値段</label>
-                            <input type="price" class="form-control" id="price" name="price" placeholder="1000, 2000, 3000, ...">
+                            <input type="price" class="form-control" id="price" name="price" value="{{ old('price') }}" placeholder="1000, 2000, 3000, ...">
                         </div>
 
                         <div class="form-group">

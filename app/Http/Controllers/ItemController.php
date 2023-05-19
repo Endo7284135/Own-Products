@@ -25,13 +25,12 @@ class ItemController extends Controller
     
         public function store(Request $request){
         
-            // Nameは入力必須項目 by Higaki
             $validate_rule = [
                 'name' => 'required',
                 'type_id' => 'required',
                 'size_id' => 'required',
-                'detail' => 'required',
                 'price' => 'integer',
+                'detail' => 'required',
             ];
             $this->validate($request, $validate_rule);
     
@@ -65,6 +64,9 @@ class ItemController extends Controller
         
             $validate_rule = [
                 'name' => 'required',
+              //'type_id' => 'required',
+                'size_id' => 'required',
+                'price' => 'integer',
                 'detail' => 'required',
             ];
             $this->validate($request, $validate_rule);

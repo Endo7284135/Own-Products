@@ -232,7 +232,7 @@ return [
         ],
         [
             'text' => 'アイテムを探す',
-            'url'  => 'search',
+            'url'  => '/items/search',
             'icon' => 'fa fa-shopping-cart ',
         ],
         [
