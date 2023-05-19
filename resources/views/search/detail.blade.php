@@ -123,6 +123,13 @@
             </div>
 
             <div class="col-12 mt-3 mb-0 text-start">
+                <label>値段(円)：</label>
+            </div>
+            <div class="col-12 mt-0 mb-3 text-start">
+                <input type="text" style="width:100%" class="form-control" name="price" id="" readonly value= "{{$item->price}}"></input>
+            </div>
+
+            <div class="col-12 mt-3 mb-0 text-start">
                 <label>登録日時：</label>
             </div>
             <div class="col-12 mt-0 mb-3 text-start">

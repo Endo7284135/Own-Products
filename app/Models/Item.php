@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class Item extends Model
 {
@@ -18,6 +19,14 @@ class Item extends Model
         'size_id',
         'price',
         'detail',
+    ];
+
+    use Sortable;
+
+    public $sortable = [ //追記(ソートに使うカラムを指定
+        'id',
+        'price',
+        'size_id',
     ];
 
     const SIZES = [

@@ -51,7 +51,7 @@
 
                         <div class="form-group">
                             <label for="price">値段</label>
-                            <input type="price" class="form-control" id="price" name="price" value="{{ old('price') }}" placeholder="1000, 2000, 3000, ...">
+                            <input type="price" class="form-control" id="price" name="price" value="{{ old('price') }}" placeholder="1000円, 2000円, 3000円, ...">
                         </div>
 
                         <div class="form-group">

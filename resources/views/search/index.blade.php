@@ -26,11 +26,11 @@
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
-                            <th>ID</th>
+                            <th>@sortablelink('id', 'ID')</th>
                             <th>商品名</th>
                             <th>種別</th>
-                            <th>サイズ</th>
-                            <th>値段</th>                        
+                            <th>@sortablelink('size_id', 'サイズ')</th>
+                            <th>@sortablelink('price', '値段')</th>                        
                             <th>更新日時</th>
                             <th>詳細</th>
                         </tr>
@@ -109,13 +109,16 @@
                             @elseif ( $value->size_id==5)
                                 <td>LL</td>
                             @endif
-                            <td>{{ $value->price }}</td>
+                            <td>{{ $value->price }}円</td>
                             <td>{{ $value->updated_at->format('m月d日H:i') }}</td>
                             <td  width="15%"><a href="{{ url('items/search/detail/'.$value->id) }}"> >>詳細 </a></td>
                         </tr>
                     @endforeach 
                     <!--ループ おわり-->
                 </table>
+
+                {{ $items->links('vendor.pagination.default') }}
+
             </div>
         </div>
     </body>

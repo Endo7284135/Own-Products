@@ -64,7 +64,7 @@ class ItemController extends Controller
         
             $validate_rule = [
                 'name' => 'required',
-              //'type_id' => 'required',
+                'type_id' => 'required',
                 'size_id' => 'required',
                 'price' => 'integer',
                 'detail' => 'required',
@@ -73,7 +73,7 @@ class ItemController extends Controller
     
             // 既存のレコードを取得して、編集してから保存する by Higaki
             $items = Item::where('id','=',$request->id)->first();
-            //dd($request->id);
+            //dd($request->size_id);
             $items->name = $request->name;
             $items->type_id = $request->type_id;
             $items->size_id = $request->size_id;
