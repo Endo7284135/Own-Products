@@ -11,24 +11,24 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">商品 / 詳細検索</h3>
+                    <div class="d-grid gap-3 d-md-block">
+                        <table>
+                            <th>
+                                <form action="{{ route('searches.index') }}" method="GET">
+                                    <input type="text" name="keyword" value="{{ $keyword }}">
+                                    <input type="submit" class="btn btn-secondary" value="検索">
+                                </form>
+                            </th>
+                        </table>
+                    </div>
                 </div>
-                <table width="100%">
-                    <th>
-                        <form action="{{ route('searches.index') }}" method="GET">
-                            <input type="text" name="keyword" value="{{ $keyword }}">
-                            <input type="submit" class="btn btn-secondary" value="検索">
-                        </form>
-                    </th>
-                </table>
-            </div>
                 <div class="card-body table-responsive p-0">
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
                             <th>@sortablelink('id', 'ID')</th>
                             <th>商品名</th>
-                            <th>種別</th>
+                            <th>@sortablelink('type_id', '種別')</th>
                             <th>@sortablelink('size_id', 'サイズ')</th>
                             <th>@sortablelink('price', '値段')</th>                        
                             <th>更新日時</th>

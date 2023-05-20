@@ -152,3 +152,6 @@
     </body>
 </html>
 @endsection
+
+@section('css')
+@stop
