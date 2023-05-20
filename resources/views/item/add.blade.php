@@ -28,9 +28,8 @@
                             <input type="text" class="form-control" id="name" name="name" placeholder="名前" value="{{ old('name') }}">
                         </div>
 
-                        <div class="form-group">
+                        <div class="select1">
                             <label for="type_id">種類</label>
-                        <div class="col-md-6">
                                 <select name="type_id">
                                     <option value="" disable></option>
                                     @foreach($types as $type_id => $name)
@@ -39,14 +38,14 @@
                                 </select>
                         </div>
                         
-                        <div class="form-group">
-                        <label for="size_id">サイズ</label>
-                        @foreach ($sizes as $size_id => $name)
-                            <label class="form-check-label">
-                            <input type="radio" name="size_id" value="{{ $size_id }}" @if(old('size_id')==$size_id) checked @endif>
-                            <span><i></i>{{ $name }}</span>
-                            </label>
-                        @endforeach
+                        <div class="select2">
+                            <label for="size_id">サイズ</label>
+                                @foreach ($sizes as $size_id => $name)
+                                    <label class="form-check-label">
+                                    <input type="radio" name="size_id" value="{{ $size_id }}" @if(old('size_id')==$size_id) checked @endif>
+                                    <span><i></i>{{ $name }}</span>
+                                    </label>
+                                @endforeach
                         </div>
 
                         <div class="form-group">
@@ -56,19 +55,14 @@
 
                         <div class="form-group">
                             <label for="detail">詳細</label>
-                        <div class="col-md-6">
-                            <textarea class="form-control" name="detail" cols="30" rows="10" placeholder="詳細説明">{{ old('detail') }}</textarea>
+                            <textarea class="form-control" name="detail" cols="30" rows="5" placeholder="詳細説明">{{ old('detail') }}</textarea>
                         </div>
 
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary btn-lg">登録</button>
+                        </button>
                     </div>
 
-                    <div class="row mb-0">
-                        <div class="col-md-6 offset-md-4">
-                            <button type="submit" class="btn btn-primary">
-                                {{ __('登録') }}
-                            </button>
-                        </div>
-                    </div>
                 </form>
             </div>
         </div>
@@ -76,6 +70,24 @@
 @stop
 
 @section('css')
+<style>
+    .form-check-label{
+        margin-left: 8px;
+    }
+    .form-group{
+        margin-bottom: 20px;
+    }
+    .select1{
+        display: inline;
+    }
+    .select2{
+        display: inline;
+        margin-left: 8px;
+    }
+    .button{
+        margin-left: 1px;
+    }
+</style>
 @stop
 
 @section('js')
