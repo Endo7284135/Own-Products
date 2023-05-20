@@ -59,8 +59,7 @@
                         </div>
 
                     <div class="button">
-                        <button type="submit" class="btn btn-primary btn-lg">登録</button>
-                        </button>
+                        <button type="submit" class="btn btn-primary btn-lg">登録</button></button>
                     </div>
 
                 </form>

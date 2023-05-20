@@ -226,6 +226,11 @@ return [
 
     'menu' => [
         [
+            'text' => 'ホーム',
+            'url'  => '/',
+            'icon' => 'fa fa-home',
+        ],
+        [
             'text' => '商品一覧',
             'url'  => 'items',
             'icon' => 'fa fa-university',
@@ -235,11 +240,11 @@ return [
             'url'  => '/items/search',
             'icon' => 'fa fa-shopping-cart ',
         ],
-        [
-            'text' => 'お気に入り',
-            'url'  => 'favorite',
-            'icon' => 'fa fa-heart  ',
-        ],
+        //[
+        //    'text' => 'お気に入り',
+        //    'url'  => 'favorite',
+        //    'icon' => 'fa fa-heart  ',
+        //],
 
         // AdminLTEデフォルト
         /*

@@ -45,11 +45,6 @@
         <div class="system-title">
                 Welcome to our site K-selections
         </div>
-            <!-- アクセスカウント はじめ-->
-            <div class="access-count">
-            <p>(仮)あなたは〇〇人目のアクセス者です</p>
-            </div>
-            <!-- アクセスカウント おわり-->
             <!-- ページ紹介 はじめ-->
             <div class="document-title">
             <p>世の中にはファッションブランドがたくさんありますよね</p>
