@@ -117,7 +117,7 @@
                     <!--ループ おわり-->
                 </table>
 
-                {{ $items->links('vendor.pagination.default') }}
+                {{ $items->links('vendor.pagination.simple-bootstrap-4') }}
 
             </div>
         </div>

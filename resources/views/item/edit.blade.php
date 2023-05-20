@@ -30,11 +30,10 @@
                             <input type="text" class="form-control" id="name" name="name" placeholder="名前" value="{{ $item->name }}">
                         </div>
 
-                        <div class="form-group">
+                        <div class="select1">
                             <label for="type_id">種類</label>
-                        <div class="col-md-6">
-                            <select name="type_id">
-                                @foreach($types as $type_id => $name)
+                                <select name="type_id">
+                                    @foreach($types as $type_id => $name)
                                     @if( $item->type_id ==  $type_id )
                                     <option value="{{ $type_id }}" selected>{{ $name }}</option>
                                     @else
@@ -44,7 +43,7 @@
                             </select>
                         </div>
                         
-                        <div class="form-group">
+                        <div class="select2">
                         <label for="size_id">サイズ</label>
                         @foreach ($sizes as $size_id => $name)
                             @if( $item->size_id ==  $size_id )
@@ -68,19 +67,18 @@
                         <div class="form-group">
                             <label for="detail">詳細</label>
                         <div class="col-md-6">
-                            <textarea class="form-control" name="detail" cols="30" rows="10">{{$item->detail}}</textarea>
+                            <textarea class="form-control" name="detail" cols="30" rows="5">{{$item->detail}}</textarea>
                         </div>
 
                     </div>
 
-                    <div class="d-flex flex-row bd-highlight mb-3">
-                        <div class="col-md-2 offset-md-2">
-                            <button type="submit" class="btn btn-primary">{{ __('編集') }}</button>
-                        </div>
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary btn-lg">編集</button>
+                    </div>
 
-                        <div class="col-md-2 offset-md-2">
-                            <a href="/items/destroy/{{$item->id}}"><button type="button" class="btn btn-primary">{{ __('削除') }}</button></a>
-                        </div>
+                    <div class="button">
+                        <a href="/items/destroy/{{$item->id}}"><button type="button" class="btn btn-danger btn-lg">削除</button></a>
+                    </div>
                     </div>
                 </form>
             </div>
@@ -89,6 +87,25 @@
 @stop
 
 @section('css')
+<style>
+    .form-check-label{
+        margin-left: 8px;
+    }
+    .form-group{
+        margin-bottom: 20px;
+    }
+    .select1{
+        display: inline;
+    }
+    .select2{
+        display: inline;
+        margin-left: 8px;
+    }
+    .button{
+        margin-left: 1px;
+        display: inline;
+    }
+</style>
 @stop
 
 @section('js')
