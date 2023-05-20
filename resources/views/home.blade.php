@@ -33,10 +33,6 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .access-count{
-        font-size: 10px;
-        text-align: center;
-    }
 </style>
 
 <div class="container">
@@ -47,14 +43,10 @@
         </div>
             <!-- ページ紹介 はじめ-->
             <div class="document-title">
-            <p>世の中にはファッションブランドがたくさんありますよね</p>
-            <div style=”line-height:1;”><b>「服が欲しいけど、どこで買えば良いのかわからない」<br>「ファッション雑誌に載っている服は値段が高すぎる」</b></div>
-            <p>と悩んでいる方も多いのではないでしょうか</p>
-            <p>K-selectionsでは数えきれない程存在するファッションブランドの中から<br>皆さんにおすすめするブランドを厳選してご紹介します</p>
-            </div>
+            <p>在庫を持たない「完全受注生産」により衣類廃棄ゼロを実現<br>環境保護を重視しつつ、年齢を重ねても型にはまらずトレンドよりも<br>自分らしさを大事にしたい男性へ向けたブランド"K-selections"へようこそ</p>
+            <p>このシステムでは当社が取り扱うブランドの情報取得が可能です</p>
             <!-- ページ紹介 おわり-->
-        </div>
-        <br>
+            </div>
         <div class="image-container clearfix">
             <img src="/images/jacket.png" class="small-img">
             <img src="/images/jeans.png" class="small-img">

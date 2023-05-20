@@ -27,6 +27,7 @@ class Item extends Model
         'id',
         'price',
         'size_id',
+        'type_id',
     ];
 
     const SIZES = [
