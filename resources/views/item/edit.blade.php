@@ -20,7 +20,7 @@
             @endif
 
             <div class="card card-primary">
-                <form action="/items/update" method="post">
+                <form action="/update" method="post">
                     @csrf
                     <input class="form-control" type="text" name="id" value="{{$item->id}}" hidden>
                     <input class="form-control" type="text" name="user_id" value="{{$item->user_id}}" hidden>
@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="button">
-                        <a href="/items/destroy/{{$item->id}}"><button type="button" class="btn btn-danger btn-lg">削除</button></a>
+                        <a href="/destroy/{{$item->id}}"><button type="button" class="btn btn-danger btn-lg">削除</button></a>
                     </div>
                     </div>
                 </form>
