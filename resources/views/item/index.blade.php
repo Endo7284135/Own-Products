@@ -15,7 +15,7 @@
                     <div class="card-tools">
                         <div class="input-group input-group-sm">
                             <div class="input-group-append">
-                                <a href="{{ url('items/add') }}" class="btn btn-primary">商品登録</a>
+                                <a href="/add" class="btn btn-primary">商品登録</a>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                                     <td>{{ $sizes[$value->size_id] }}</td>
                                     <td>{{ $value->price }}円</td>
                                     <td>{{ $value->updated_at->format('m月d日H:i') }}</td>
-                                    <td  width="15%"><a href="{{ url('items/item_edit/'.$value->id) }}"> >>編集 </a></td>
+                                    <td  width="15%"><a href="/item_edit/{{$value->id}}"> >>編集 </a></td>
                                 </tr>
                             @endforeach
                         </tbody>

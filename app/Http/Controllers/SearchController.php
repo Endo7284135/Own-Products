@@ -33,12 +33,3 @@ class SearchController extends Controller
     
 }
 // **************************************
-
-// class SearchController extends Controller
-// {
-//     public function index()
-//     {
-//         $items = Item::all();
-//         return view('search.index',compact('items') );
-//     }
-// }

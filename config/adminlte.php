@@ -227,17 +227,17 @@ return [
     'menu' => [
         [
             'text' => 'ホーム',
-            'url'  => '/',
+            'url'  => '/home',
             'icon' => 'fa fa-home',
         ],
         [
             'text' => '商品一覧',
-            'url'  => 'items',
+            'url'  => 'item',
             'icon' => 'fa fa-university',
         ],
         [
             'text' => 'アイテムを探す',
-            'url'  => '/items/search',
+            'url'  => '/search',
             'icon' => 'fa fa-shopping-cart ',
         ],
         //[
