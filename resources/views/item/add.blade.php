@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name">商品名</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="名前" value="{{ old('name') }}">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="名前(15文字以内)" value="{{ old('name') }}">
                         </div>
 
                         <div class="select1">
@@ -50,12 +50,12 @@
 
                         <div class="form-group">
                             <label for="price">値段</label>
-                            <input type="price" class="form-control" id="price" name="price" value="{{ old('price') }}" placeholder="1000円, 2000円, 3000円, ...">
+                            <input type="price" class="form-control" id="price" name="price" value="{{ old('price') }}" placeholder="10000円~500000円, ...">
                         </div>
 
                         <div class="form-group">
                             <label for="detail">詳細</label>
-                            <textarea class="form-control" name="detail" cols="30" rows="5" placeholder="詳細説明">{{ old('detail') }}</textarea>
+                            <textarea class="form-control" name="detail" cols="30" rows="5" placeholder="詳細説明(100文字以内)">{{ old('detail') }}</textarea>
                         </div>
 
                     <div class="button">

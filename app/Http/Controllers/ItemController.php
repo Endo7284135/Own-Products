@@ -26,11 +26,11 @@ class ItemController extends Controller
         public function store(Request $request){
         
             $validate_rule = [
-                'name' => 'required',
+                'name' => 'min:5|max:15|required',
                 'type_id' => 'required',
                 'size_id' => 'required',
-                'price' => 'integer',
-                'detail' => 'required',
+                'price' => 'numeric|between:10000,500000',
+                'detail' => 'min:5|max:100|required',
             ];
             $this->validate($request, $validate_rule);
     
@@ -63,11 +63,11 @@ class ItemController extends Controller
         public function update(Request $request){
         
             $validate_rule = [
-                'name' => 'required',
+                'name' => 'min:5|max:15|required',
                 'type_id' => 'required',
                 'size_id' => 'required',
-                'price' => 'integer',
-                'detail' => 'required',
+                'price' => 'numeric|between:10000,500000',
+                'detail' => 'min:5|max:100|required',
             ];
             $this->validate($request, $validate_rule);
     

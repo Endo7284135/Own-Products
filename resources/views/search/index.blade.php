@@ -111,7 +111,7 @@
                             @endif
                             <td>{{ $value->price }}円</td>
                             <td>{{ $value->updated_at->format('m月d日H:i') }}</td>
-                            <td  width="15%"><a href="{{ url('items/search/detail/'.$value->id) }}"> >>詳細 </a></td>
+                            <td  width="15%"><a href="/search/detail/{{$value->id}}"> >>詳細 </a></td>
                         </tr>
                     @endforeach 
                     <!--ループ おわり-->
