@@ -59,6 +59,19 @@
                         @endforeach
                         </div>
 
+                        <div class="select3">
+                            <label for="color_id">カラー</label>
+                                <select name="color_id">
+                                    @foreach($colors as $color_id => $name)
+                                    @if( $item->color_id ==  $color_id )
+                                    <option value="{{ $color_id }}" selected>{{ $name }}</option>
+                                    @else
+                                    <option value="{{ $color_id }}">{{ $name }}</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                        </div>
+
                         <div class="form-group">
                             <label for="price">値段</label>
                             <input type="price" class="form-control" id="price" name="price" value="{{ $item->price }}">
@@ -98,6 +111,10 @@
         display: inline;
     }
     .select2{
+        display: inline;
+        margin-left: 8px;
+    }
+    .select3{
         display: inline;
         margin-left: 8px;
     }

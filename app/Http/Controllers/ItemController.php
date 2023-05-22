@@ -13,14 +13,16 @@ class ItemController extends Controller
             $items = Item::all();
             $types = Item::TYPES;
             $sizes = Item::SIZES;
-            return view('item.index',compact('items','types','sizes') );
+            $colors = Item::COLORS;
+            return view('item.index',compact('items','types','sizes','colors') );
         }
     
         public function create()
         {
             $types = Item::TYPES;
             $sizes = Item::SIZES;
-            return view('item.add',compact('types','sizes') );
+            $colors = Item::COLORS;
+            return view('item.add',compact('types','sizes','colors') );
         }
     
         public function store(Request $request){
@@ -29,6 +31,7 @@ class ItemController extends Controller
                 'name' => 'min:5|max:15|required',
                 'type_id' => 'required',
                 'size_id' => 'required',
+                'color_id' => 'required',
                 'price' => 'numeric|between:10000,500000',
                 'detail' => 'min:5|max:100|required',
             ];
@@ -40,6 +43,7 @@ class ItemController extends Controller
             $items->user_id = Auth::id();
             $items->type_id = $request->type_id;
             $items->size_id = $request->size_id;
+            $items->color_id = $request->color_id;
             $items->price = $request->price;
             $items->detail = $request->detail;
             $items->save();
@@ -53,9 +57,10 @@ class ItemController extends Controller
     
             $types = Item::TYPES;
             $sizes = Item::SIZES;
+            $colors = Item::COLORS;
             $items = Item::where('id','=',$request->id)->first();
             
-            return view('item.edit',compact('types','sizes') )->with([
+            return view('item.edit',compact('types','sizes','colors') )->with([
                     'item' => $items
             ]);
         }
@@ -66,6 +71,7 @@ class ItemController extends Controller
                 'name' => 'min:5|max:15|required',
                 'type_id' => 'required',
                 'size_id' => 'required',
+                'color_id' => 'required',
                 'price' => 'numeric|between:10000,500000',
                 'detail' => 'min:5|max:100|required',
             ];
@@ -76,6 +82,7 @@ class ItemController extends Controller
             $items->name = $request->name;
             $items->type_id = $request->type_id;
             $items->size_id = $request->size_id;
+            $items->color_id = $request->color_id;
             $items->price = $request->price;
             $items->detail = $request->detail;
             $items->save();

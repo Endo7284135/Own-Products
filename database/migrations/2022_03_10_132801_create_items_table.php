@@ -21,6 +21,7 @@ class CreateItemsTable extends Migration
             $table->integer('price');
             $table->unsignedsmallInteger('type_id');
             $table->unsignedsmallInteger('size_id');
+            $table->unsignedsmallInteger('color_id');
             $table->string('detail',500);
             $table->timestamps();
             $table->softDeletes();

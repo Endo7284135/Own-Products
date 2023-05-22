@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="select1">
-                            <label for="type_id">種類</label>
+                            <label for="type_id">種別</label>
                                 <select name="type_id">
                                     <option value="" disable></option>
                                     @foreach($types as $type_id => $name)
@@ -46,6 +46,16 @@
                                     <span><i></i>{{ $name }}</span>
                                     </label>
                                 @endforeach
+                        </div>
+
+                        <div class="select3">
+                            <label for="color_id">カラー</label>
+                                <select name="color_id">
+                                    <option value="" disable></option>
+                                    @foreach($colors as $color_id => $name)
+                                    <option value="{{ $color_id }}" @if(old('color_id')==$color_id)selected @endif>{{ $name }}</option>
+                                    @endforeach
+                                </select>
                         </div>
 
                         <div class="form-group">
@@ -80,6 +90,10 @@
         display: inline;
     }
     .select2{
+        display: inline;
+        margin-left: 8px;
+    }
+    .select3{
         display: inline;
         margin-left: 8px;
     }
