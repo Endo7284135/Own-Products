@@ -93,6 +93,31 @@
             @elseif ( $item->size_id==5)
                 <?php $size_id="LL" ; ?>
             @endif
+            @if ( $item->color_id==1)
+                <?php $color_id="レッド" ; ?>
+            @elseif ( $item->color_id==2)
+                <?php $color_id="イエロー" ; ?>
+            @elseif ( $item->color_id==3)
+                <?php $color_id="ブルー" ; ?>
+            @elseif ( $item->color_id==4)
+                <?php $color_id="グリーン" ; ?>
+            @elseif ( $item->color_id==5)
+                <?php $color_id="ブラック" ; ?>
+            @elseif ( $item->color_id==6)
+                <?php $color_id="ホワイト" ; ?>
+            @elseif ( $item->color_id==7)
+                <?php $color_id="オレンジ" ; ?>
+            @elseif ( $item->color_id==8)
+                <?php $color_id="ピンク" ; ?>
+            @elseif ( $item->color_id==9)
+                <?php $color_id="グレー" ; ?>
+            @elseif ( $item->color_id==10)
+                <?php $color_id="ベージュ" ; ?>
+            @elseif ( $item->color_id==11)
+                <?php $color_id="ブラウン" ; ?>
+            @elseif ( $item->color_id==12)
+                <?php $color_id="パープル" ; ?>
+            @endif
 
             <div class="col-12 mt-3 mb-0 text-start">
                 <label>ID：</label>
@@ -120,6 +145,13 @@
             </div>
             <div class="col-12 mt-0 mb-3 text-start">
                 <input type="text" style="width:100%" class="form-control" name="size_id" id="" readonly value= <?php echo $size_id ?>></input>
+            </div>
+
+            <div class="col-12 mt-3 mb-0 text-start">
+                <label>カラー：</label>
+            </div>
+            <div class="col-12 mt-0 mb-3 text-start">
+                <input type="text" style="width:100%" class="form-control" name="color_id" id="" readonly value= <?php echo $color_id ?>></input>
             </div>
 
             <div class="col-12 mt-3 mb-0 text-start">

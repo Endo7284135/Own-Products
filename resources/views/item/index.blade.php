@@ -28,6 +28,7 @@
                                 <th>商品名</th>
                                 <th>種別</th>
                                 <th>サイズ</th>
+                                <th>カラー</th>
                                 <th>値段</th>
                                 <th>更新日時</th>
                                 <th>編集</th>
@@ -40,6 +41,7 @@
                                     <td>{{ $value->name }}</td>
                                     <td>{{ $types[$value->type_id] }}</td>
                                     <td>{{ $sizes[$value->size_id] }}</td>
+                                    <td>{{ $colors[$value->color_id] }}</td>
                                     <td>{{ $value->price }}円</td>
                                     <td>{{ $value->updated_at->format('m月d日H:i') }}</td>
                                     <td  width="15%"><a href="/item_edit/{{$value->id}}"> >>編集 </a></td>

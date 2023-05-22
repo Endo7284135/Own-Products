@@ -30,6 +30,7 @@
                             <th>商品名</th>
                             <th>@sortablelink('type_id', '種別')</th>
                             <th>@sortablelink('size_id', 'サイズ')</th>
+                            <th>@sortablelink('color_id', 'カラー')</th>
                             <th>@sortablelink('price', '値段')</th>                        
                             <th>更新日時</th>
                             <th>詳細</th>
@@ -108,6 +109,31 @@
                                 <td>L</td>
                             @elseif ( $value->size_id==5)
                                 <td>LL</td>
+                            @endif
+                            @if ( $value->color_id==1)
+                                <td>レッド</td>
+                            @elseif ( $value->color_id==2)
+                                <td>イエローS</td>
+                            @elseif ( $value->color_id==3)
+                                <td>ブルー</td>
+                            @elseif ( $value->color_id==4)
+                                <td>グリーン</td>
+                            @elseif ( $value->color_id==5)
+                                <td>ブラック</td>
+                            @elseif ( $value->color_id==6)
+                                <td>ホワイト</td>
+                            @elseif ( $value->color_id==7)
+                                <td>オレンジ</td>
+                            @elseif ( $value->color_id==8)
+                                <td>ピンク</td>
+                            @elseif ( $value->color_id==9)
+                                <td>グレー</td>
+                            @elseif ( $value->color_id==10)
+                                <td>ベージュ</td>
+                            @elseif ( $value->color_id==11)
+                                <td>ブラウン</td>
+                            @elseif ( $value->color_id==12)
+                                <td>パープル</td>
                             @endif
                             <td>{{ $value->price }}円</td>
                             <td>{{ $value->updated_at->format('m月d日H:i') }}</td>

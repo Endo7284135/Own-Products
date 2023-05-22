@@ -17,6 +17,7 @@ class Item extends Model
         'name',
         'type_id',
         'size_id',
+        'color_id',
         'price',
         'detail',
     ];
@@ -28,6 +29,7 @@ class Item extends Model
         'price',
         'size_id',
         'type_id',
+        'color_id',
     ];
 
     const SIZES = [
@@ -37,6 +39,21 @@ class Item extends Model
         '4' => 'L',
         '5' => 'LL',   
         ];
+
+    const COLORS = [
+        '1' => 'レッド',
+        '2' => 'イエロー',
+        '3' => 'ブルー',
+        '4' => 'グリーン',
+        '5' => 'ブラック',
+        '6' => 'ホワイト',
+        '7' => 'オレンジ',
+        '8' => 'ピンク',
+        '9' => 'グレー',
+        '10' =>'ベージュ',
+        '11' =>'ブラウン',
+        '12' =>'パープル',
+    ];
 
     const TYPES = [
         '1' => 'カジュアルシャツ',

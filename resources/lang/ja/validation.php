@@ -159,6 +159,7 @@ return [
         'detail' => '詳細',
         'size_id' => 'サイズ',
         'price' => '値段',
+        'color_id' => 'カラー',
     ],
 
 ];
