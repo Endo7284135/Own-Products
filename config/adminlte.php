@@ -234,6 +234,7 @@ return [
             'text' => '商品一覧',
             'url'  => 'item',
             'icon' => 'fa fa-university',
+            'can'  => 'admin',
         ],
         [
             'text' => 'アイテムを探す',
