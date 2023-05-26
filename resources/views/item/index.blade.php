@@ -15,7 +15,7 @@
                     <div class="card-tools">
                         <div class="input-group input-group-sm">
                             <div class="input-group-append">
-                                <a href="{{ url('items/add') }}" class="btn btn-default">商品登録</a>
+                                <a href="/add" class="btn btn-primary">商品登録</a>
                             </div>
                         </div>
                     </div>
@@ -25,18 +25,26 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>名前</th>
+                                <th>商品名</th>
                                 <th>種別</th>
-                                <th>詳細</th>
+                                <th>サイズ</th>
+                                <th>カラー</th>
+                                <th>値段</th>
+                                <th>更新日時</th>
+                                <th>編集</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($items as $item)
+                            @foreach ($items as $value)
                                 <tr>
-                                    <td>{{ $item->id }}</td>
-                                    <td>{{ $item->name }}</td>
-                                    <td>{{ $item->type }}</td>
-                                    <td>{{ $item->detail }}</td>
+                                    <td>{{ $value->id }}</td>
+                                    <td>{{ $value->name }}</td>
+                                    <td>{{ $types[$value->type_id] }}</td>
+                                    <td>{{ $sizes[$value->size_id] }}</td>
+                                    <td>{{ $colors[$value->color_id] }}</td>
+                                    <td>{{ $value->price }}円</td>
+                                    <td>{{ $value->updated_at->format('m月d日H:i') }}</td>
+                                    <td  width="15%"><a href="/item_edit/{{$value->id}}"> >>編集 </a></td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -51,4 +59,8 @@
 @stop
 
 @section('js')
+    <script>
+    const div = document.querySelector('div')
+    div.animate([{opacity: '0'}, {opacity: '1'}], 200)
+    </script>
 @stop

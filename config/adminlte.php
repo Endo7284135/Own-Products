@@ -226,10 +226,26 @@ return [
 
     'menu' => [
         [
-            'text' => '商品一覧',
-            'url'  => 'items',
-            'icon' => 'fas fa-gamepad',
+            'text' => 'ホーム',
+            'url'  => '/home',
+            'icon' => 'fa fa-home',
         ],
+        [
+            'text' => '商品一覧',
+            'url'  => 'item',
+            'icon' => 'fa fa-university',
+            'can'  => 'admin',
+        ],
+        [
+            'text' => 'アイテムを探す',
+            'url'  => '/search',
+            'icon' => 'fa fa-shopping-cart ',
+        ],
+        //[
+        //    'text' => 'お気に入り',
+        //    'url'  => 'favorite',
+        //    'icon' => 'fa fa-heart  ',
+        //],
 
         // AdminLTEデフォルト
         /*
