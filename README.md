@@ -1,35 +1,31 @@
-## 商品管理システム
+# 商品管理システム
 
-### 環境構築手順
+## 概要  アプリケーションの概要
+K-selectionsのホームページでは、商品の在庫を持たない「完全受注生産」により開発した自社アパレルを紹介している。
+商品の更新作業が頻繁に行われるようになったが、ホームページを直接修正するのは時間がかかる。
+そこで、簡単に商品の更新作業をしたいとの要望が出てきた。
+本システムは、ホームページで紹介する商品をWebシステムで管理し、作業の効率化を図ることを目的とする。
+ホームページに商品紹介リンクを貼り、そこから本システムに遷移し、商品一覧の閲覧、検索を行えるサービスを提供する。
+また本システムは、管理者に商品の登録・編集・削除の権限を付与し、商品管理を行えるサービスを提供する。
 
-* Gitクローン
-* .env.example をコピーして .env を作成
-* MySQLかPostgreSQLのデータベース作成（名前：item_management）  
-  ローカルでMAMPを使用しているのであれば、MySQL推奨
-* .env にデータベース接続情報追加
-```
-例）
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=item_management
-DB_USERNAME=root
-DB_PASSWORD=root
-```
-* APP_KEY生成
-```
-$ php artisan key:generate
-```
-* Composerインストール
-```
-$ composer install
-```
-* フロント環境構築
-```
-$ npm install
-$ npm run dev
-```
-* マイグレーション
-```
-$ php artisan migrate
-```
+## 主な機能
+- ログイン・ログアウト機能
+- 商品一覧画面
+- 商品新規登録、編集、削除画面
+- 商品検索機能
+
+## 開発環境
+PHP 8.1.12
+MySQL 15.1
+Laravel 8.83.3
+
+## 設計書
+https://drive.google.com/drive/folders/1XABmXsvtDZbU1p6I8LTlUK478RDHJq65
+
+## システム閲覧
+https://own-products-pipeline.herokuapp.com/
+
+### テストアカウント情報(管理者アカウント)
+
+メールアドレス : techis@gmail.co
+パスワード : admin1234
