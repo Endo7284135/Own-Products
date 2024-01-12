@@ -37,7 +37,7 @@ class ItemController extends Controller
             ];
             $this->validate($request, $validate_rule);
     
-            // 新しくレコードを追加する by Higaki
+            // 新しくレコードを追加する
             $items = new Item();
             $items->name = $request->name;
             $items->user_id = Auth::id();
@@ -53,8 +53,7 @@ class ItemController extends Controller
     
         public function edit(Request $request)
         {
-            //一覧から指定されたIDと同じIDのレコードを取得する by Higaki
-    
+            //一覧から指定されたIDと同じIDのレコードを取得する   
             $types = Item::TYPES;
             $sizes = Item::SIZES;
             $colors = Item::COLORS;
@@ -77,7 +76,7 @@ class ItemController extends Controller
             ];
             $this->validate($request, $validate_rule);
     
-            // 既存のレコードを取得して、編集してから保存する by Higaki
+            // 既存のレコードを取得して、編集してから保存する
             $items = Item::where('id','=',$request->id)->first();
             $items->name = $request->name;
             $items->type_id = $request->type_id;
@@ -92,7 +91,7 @@ class ItemController extends Controller
     
         public function destroy(Request $request){
     
-            // 既存のレコードを取得して、削除する by Higaki
+            // 既存のレコードを取得して、削除する
             $items = Item::where('id','=',$request->id)->first();
             $items->delete();
     
