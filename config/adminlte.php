@@ -241,6 +241,11 @@ return [
             'url'  => '/search',
             'icon' => 'fa fa-shopping-cart ',
         ],
+        [
+            'text' => 'バージョン情報',
+            'url'  => '/version',
+            'icon' => 'fa fa-cog ',
+        ],
         //[
         //    'text' => 'お気に入り',
         //    'url'  => 'favorite',

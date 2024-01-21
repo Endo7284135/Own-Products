@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/version', [App\Http\Controllers\VersionController::class, 'index'])->name('version');
     Route::get('/search', [App\Http\Controllers\SearchController::class, 'index'])->name('searches.index');
     Route::get('/search/detail/{id}', [App\Http\Controllers\SearchController::class, 'detail']);
 });
