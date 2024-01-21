@@ -16,10 +16,11 @@
         </div>
             <!-- ページ紹介 はじめ-->
         <div class="system-document">
-            <p>Laravel Framework 8.83.27</p>
-            <p>Node.js version v18.14.2</p>
-            <p>MySQL Workbench 5.6.50-log</p>
-            <!-- ページ紹介 おわり-->
+            <ul>
+                <li>Laravel Framework 8.83.27</li>
+                <li>Node.js version v18.14.2</li>
+                <li>MySQL Workbench 5.6.50-log</li>
+            </ul>
         </div>
 
     </div>
